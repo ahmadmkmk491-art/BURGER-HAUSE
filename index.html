@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>برجر هاوس</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff8f0;
+      color: #222;
+    }
+    header {
+      background: #c62828;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    header h1 {
+      font-size: 28px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('[images.unsplash.com](https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1400&q=80)') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #ffca28;
+      color: #222;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ffb300;
+    }
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .section h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #c62828;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h4 {
+      margin: 15px 0 10px;
+      font-size: 24px;
+    }
+    .card p {
+      margin-bottom: 10px;
+      color: #666;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #c62828;
+    }
+    .offers {
+      background: #ffe082;
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 34px;
+      }
+      .hero-content p {
+        font-size: 18px;
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍔 برجر هاوس</h1>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#menu">المنيو</a>
+      <a href="#offers">العروض</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>ألذ برجر في المدينة</h2>
+      <p>اطلب الآن واستمتع بأشهى الوجبات السريعة بأسعار ممتازة</p>
+      <button class="btn" onclick="showMessage()">اطلب الآن</button>
+    </div>
+  </section>
+  <section class="section" id="menu">
+    <h3>المنيو</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80)" alt="برجر كلاسيك">
+        <h4>برجر كلاسيك</h4>
+        <p>لحم مشوي، جبنة، خس، طماطم، وصوص خاص</p>
+        <div class="price">25 ريال</div>
+      </div>
+      <div class="card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80)" alt="برجر دبل">
+        <h4>برجر دبل</h4>
+        <p>قطعتين لحم، جبنة مضاعفة، ومخلل مقرمش</p>
+        <div class="price">35 ريال</div>
+      </div>
+      <div class="card">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80)" alt="وجبة دجاج">
+        <h4>وجبة دجاج</h4>
+        <p>ساندويتش دجاج مقرمش مع البطاطس والمشروب</p>
+        <div class="price">30 ريال</div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="offers">
+    <h3>العروض</h3>
+    <div class="offers">
+      <h4>عرض اليوم 🔥</h4>
+      <p>اشترِ 2 برجر واحصل على بطاطس مجانية</p>
+      <br>
+      <button class="btn" onclick="showOffer()">اعرف العرض</button>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <h3>اتصل بنا</h3>
+    <p>📍 الرياض - شارع الملك</p>
+    <p>📞 0500000000</p>
+    <p>📧 info@burgerhouse.com</p>
+  </section>
+  <footer>
+    <p>جميع الحقوق محفوظة © 2025 - برجر هاوس</p>
+  </footer>
+  <script>
+    function showMessage() {
+      alert("تم تحويلك إلى صفحة الطلب!");
+    }
+    function showOffer() {
+      alert("عرض اليوم: 2 برجر + بطاطس مجانية 🎉");
+    }
+  </script>
+</body>
+</html>
